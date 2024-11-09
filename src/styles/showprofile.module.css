@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.container {
+  padding: 2rem 0;
+}
+
+/* Encabezado con imagen */
+.headerImage {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.businessImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.businessName {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Perfil */
+.profileSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.profession {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 1rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Tarjeta Sobre mí y Descripción */
+.descriptionCard {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: #495057;
+  text-align: justify;
+}
+
+/* Información de contacto */
+.contactCard {
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.contactTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.contactText {
+  font-size: 1rem;
+}
+
+/* Certificado */
+.certificateSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.certificateImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.certificateImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certificateImage:hover {
+  transform: scale(1.05);
+}
+
+/* Portafolio */
+.portfolioSection {
+  margin-bottom: 2rem;
+}
+
+.portfolioCol {
+  margin-bottom: 1rem;
+}
+
+.portfolioImageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolioImageContainer:hover .portfolioImage {
+  transform: scale(1.05);
+}

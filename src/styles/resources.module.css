@@ -1,0 +1,91 @@
+/* Hero Section with Background */
+.heroSection {
+    position: relative;
+    background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730001185/Resources_Header_rneolr.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    min-height: 700px;
+    margin-top: 50px;
+  }
+  
+  .heroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 43, 91, 0.1); /* Dark blue overlay */
+    z-index: 1;
+  }
+  
+  .heroSection > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 1rem;
+  }
+  
+  .subTitle {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* Card Styles */
+  .card {
+    border-radius: 15px;
+    border: none;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #002b5b;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #495057;
+  }
+  
+  /* Intro Text */
+  .introText {
+    font-size: 1.2rem;
+    color: #495057;
+    margin-bottom: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .heroSection {
+      background-size: auto;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subTitle {
+      font-size: 1rem;
+    }
+  }
+  

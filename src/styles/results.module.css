@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+.container {
+  padding: 2rem;
+}
+
+.searchBoxContainer {
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+
+.searchParams {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: #495057;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .resultsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .resultsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Custom pagination styling */
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pageItem {
+  margin: 0 0.3rem;
+}
+
+.pageLink {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #495057;
+  background-color: #e9ecef;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pageLink:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.disabled .pageLink {
+  background-color: #f1f1f1;
+  color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.activePage .pageLink {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}

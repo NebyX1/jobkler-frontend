@@ -1,0 +1,65 @@
+/* Sección de error 404 */
+.notFoundSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  
+  /* Imagen de fondo */
+  .heroSection {
+    background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1729917904/Error-404_ufszxi.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  /* Título */
+  .title {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* Subtítulo */
+  .subTitle {
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* Botón de regreso a la página principal */
+  .homeButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #002b5b;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .homeButton:hover {
+    background-color: #014782;
+  }
+  
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }

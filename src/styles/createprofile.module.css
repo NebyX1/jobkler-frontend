@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+.createProfileSection {
+  padding: 2rem 0;
+}
+
+.heroSection {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730020203/Profile_Header_mhsm8m.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  color: #ffffff;
+  min-height: 400px;
+  margin-top: 20px;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 59, 116, 0.1);
+  z-index: 1;
+}
+
+.heroSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Rubik', sans-serif;
+}
+
+.subTitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  font-family: 'Rubik', sans-serif;
+}
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-size: small;
+}
+
+.inputField {
+  border-radius: 10px;
+  font-size: small;
+}
+
+.inputError {
+  border-color: #dc3545;
+}
+
+.errorText {
+  color: #dc3545;
+  font-size: 0.9rem;
+}
+
+.submitButton {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #002b5b;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #014782;
+}
+
+/* Botón del chat */
+.chatButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  transition: transform 0.3s;
+}
+
+.chatButton:hover {
+  transform: scale(1.1);
+}

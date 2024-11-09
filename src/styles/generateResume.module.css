@@ -1,0 +1,62 @@
+/* generateResume.module.css */
+
+.resumeContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+  }
+  
+  .nameSection {
+    flex-grow: 1;
+  }
+  
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .profession {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .section {
+    margin-bottom: 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  .sectionContent {
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+  

@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+.bgColorNavbar {
+  background-color: #002b5b; /* Fondo azul marino oscuro */
+  background: linear-gradient(135deg, #002b5b 0%, #004080 50%, #0066cc 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.navLink {
+  position: relative;
+  color: #f7c04a !important; /* Color dorado inicial */
+  font-family: "Albert Sans", sans-serif;
+  font-size: small;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #f7c04a; /* Línea dorada inicial */
+  transition: width 0.3s ease;
+}
+
+/* Hover en los enlaces */
+.navLink:hover {
+  color: #14d0ff !important; /* Azul neón al hacer hover */
+}
+
+.navLink:hover::after {
+  width: 100%;
+  background-color: #14d0ff; /* Línea subrayada en azul neón */
+}
+
+/* Estilo para el ícono de hamburguesa de react-icons */
+.navbar-toggler {
+  border: none;
+}
+
+.navUserInfo {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: small;
+  font-family: "Playwrite GB S", sans-serif;
+}

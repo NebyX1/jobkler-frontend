@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730020203/Profile_Header_mhsm8m.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  color: #ffffff;
+  min-height: 500px;
+  margin-top: 50px;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 59, 116, 0.1);
+  z-index: 1;
+}
+
+.heroSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Tab Container */
+.tabContainer {
+  margin-top: 3rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Custom Tabs */
+.customTabs .nav-link {
+  font-size: 1rem;
+  color: #002b5b;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.customTabs .nav-link.active {
+  background-color: #014782;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customTabs .nav-link:hover {
+  background-color: #003a6e;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroSection {
+    background-size: auto;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .customTabs .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Contenedor del formulario */
+.formContainer {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Título del formulario */
+.formTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos del botón de envío */
+.submitButton {
+  font-size: 1rem;
+  padding: 0.75rem;
+  background-color: #002b5b;
+  border-color: #002b5b;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #014782;
+}
+
+/* Estilos de inputs y labels */
+.inputField {
+  border-radius: 10px;
+  font-size: small;
+}
+
+.label {
+  font-size: small;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilo para el formulario en general */
+.formSection {
+  padding: 2rem 0;
+}
+
+/* Estilos adicionales para el botón de eliminación */
+.deleteButton {
+  font-size: 1rem;
+  padding: 0.75rem;
+  background-color: #b22222; /* Rojo oscuro */
+  border-color: #b22222;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #8b0000; /* Rojo más oscuro en hover */
+}
+
+/* Estilos de advertencia */
+.formContainer .text-danger {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.text-center .form-check-input {
+  margin-right: 0.5rem;
+}

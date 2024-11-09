@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+.heroSection {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730020203/Profile_Header_mhsm8m.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  color: #ffffff;
+  min-height: 500px;
+  margin-top: 50px;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 59, 116, 0.1);
+  z-index: 1;
+}
+
+.heroSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+.username {
+  font-family: 'Playwrite GB S', sans-serif;
+  color: #F7C04A;
+}
+
+/* Estilos para el contenedor de la cita */
+.quoteContainer {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el texto de la cita */
+.quoteText {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* Estilos para el autor de la cita */
+.quoteAuthor {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px;
+}

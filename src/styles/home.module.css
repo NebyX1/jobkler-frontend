@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+/* Hero Section with Background */
+.heroSection {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730000938/Home_Header_mavezj.webp');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  color: #ffffff;
+  min-height: 400px;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 59, 116, 0.1); /* Dark overlay */
+  z-index: 1;
+}
+
+.heroSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* SearchBox Section */
+.searchBoxSection {
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730013344/SearchBox_Background_fk6wpx.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  min-height: 400px;
+}
+
+.searchBoxSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Máscara oscura */
+  z-index: 1;
+}
+
+.searchBoxSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.searchBoxSection form {
+  font-size: 0.9rem;
+  color: #495057; /* Dark text color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    background-size: auto;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Oportunities Section */
+.oportunitiesSection {
+    position: relative;
+    background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730014482/Oportunities_Section_yuj3so.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .oportunitiesSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Máscara oscura */
+    z-index: 1;
+  }
+  
+  .oportunitiesSection > * {
+    position: relative;
+    z-index: 2;
+  }
+.oportunitiesText {
+  font-family: 'Playwrite GB S', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  animation: colorChange 5s ease-in-out infinite;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Color Changing Effect */
+@keyframes colorChange {
+  0% { color: #b30e0e; }
+  25% { color: #ff9e4a; }
+  50% { color: #ffd24a; }
+  75% { color: #d1ffd9; }
+  100% { color: #052d99; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .oportunitiesText {
+    font-size: 1.8rem;
+  }
+}
+
+.roundedButton {
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 0.75rem 1.5rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.roundedButton:hover {
+  background-color: #014782; /* Cambio de color al hacer hover */
+}

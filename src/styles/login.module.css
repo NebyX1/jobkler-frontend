@@ -1,0 +1,111 @@
+/* Contenedor */
+.formContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 20px;  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombras suaves */
+  padding: 2rem;
+}
+
+/* Título */
+.formTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botón de envío */
+.submitButton {
+  font-size: 1rem;
+  padding: 0.75rem;
+  background-color: #002b5b;  /* Color base */
+  border-color: #002b5b;
+  border-radius: 15px;  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Sombras para efecto 3D */
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #014782;  /* Cambio de color al hacer hover */
+  border-color: #014782;
+}
+
+/* Inputs */
+.inputField {
+  border-radius: 10px;  /* Bordes redondeados para los campos */
+  font-size: small;  /* Tamaño de letra minimalista */
+}
+
+/* Labels */
+.label {
+  font-size: small;  /* Tamaño de letra minimalista */
+}
+
+/* Hero Section con imagen de fondo */
+.heroSection {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730001114/Login_Header_qiel5k.webp'); /* Imagen de fondo */
+  background-size: cover;  /* La imagen cubre todo el contenedor */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;  /* Espaciado superior e inferior */
+  color: #ffffff;  /* Texto blanco */
+  min-height: 700px;
+  margin-top: 50px;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 59, 116, 0.1);  /* Máscara oscura */
+  z-index: 1;
+}
+
+.heroSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Título principal */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff; /* Texto en blanco */
+  line-height: 1.2;  /* Espaciado entre líneas */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Sombra para mejor legibilidad */
+  margin-bottom: 1rem;
+  font-family: 'Rubik', sans-serif;  /* Fuente moderna y estilizada */
+}
+
+/* Subtítulo */
+.subTitle {
+  font-size: 1.25rem;
+  color: #ffffff; /* Texto en blanco */
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-family: 'Rubik', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor del formulario */
+.formSection {
+  padding: 4rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    background-size:auto;
+  }
+  .title {
+    font-size: 2rem;  /* Título más pequeño en móviles */
+  }
+  .subTitle {
+    font-size: 1rem;  /* Subtítulo más pequeño en móviles */
+  }
+}

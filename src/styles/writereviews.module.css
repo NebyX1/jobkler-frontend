@@ -1,0 +1,157 @@
+/* Contenedor principal */
+.writeReviewContainer {
+  margin-bottom: 2rem;
+}
+
+/* Título de la sección */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Formulario */
+.reviewForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Grupo de formulario */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+/* Etiquetas */
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Estrellas */
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.star {
+  font-size: 2rem;
+  color: #e4e5e9;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.filledStar {
+  color: #ffc107;
+}
+
+/* Textarea */
+.textarea {
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+/* Botón de envío */
+.submitButton {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 24px;
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes de error */
+.error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Alertas */
+.warningAlert {
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d9534f;
+  background-color: #ffefef;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stars {
+    justify-content: center;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+  }
+}
+
+/* Estilo de advertencia */
+.warningAlert {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffefef;
+  border-color: #ff4d4d;
+  color: #d9534f;
+  border-radius: 8px;
+}
+
+/* Contenedor de checkbox */
+.checkboxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo de checkbox */
+.customCheckbox .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.customCheckbox .form-check-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d9534f;
+  cursor: pointer;
+}
+
+/* Contador de caracteres */
+.characterCount {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-align: right;
+  margin-top: 0.25rem;
+}
