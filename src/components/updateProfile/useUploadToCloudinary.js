@@ -11,7 +11,7 @@ const useUploadToCloudinary = (userId) => {
   const checkImageExists = async (publicId) => {
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/cloudinary/check-image/',
+        'https://loko.jobkler.com/api/cloudinary/check-image/',
         { publicId },
         { headers: { 'Content-Type': 'application/json' } }
       );
@@ -67,7 +67,7 @@ const useUploadToCloudinary = (userId) => {
   const deleteImage = async (publicId) => {
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/cloudinary/delete-image/',
+        'http://loko.jobkler.com/api/cloudinary/delete-image/',
         { publicIds: [publicId] }, // Enviamos un array con el publicId
         {
           headers: {

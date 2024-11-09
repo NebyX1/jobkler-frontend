@@ -1,5 +1,3 @@
-// En useUploadToCloudinary.js
-
 import { toast } from "react-hot-toast";
 
 const CLOUD_NAME = "dmc65vhh6";

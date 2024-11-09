@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { useParams } from 'react-router-dom';
 import ProfileCard from '@/components/search/ProfileCard';
 import SearchBox from '@/components/search/SearchBox';
@@ -33,9 +33,16 @@ const ResultsPage = () => {
   // Obtener perfiles filtrados por códigos
   const { data: profiles = [], isLoading, isError } = useGetProfiles(professionCode, locationCode);
 
-  const pageCount = Math.ceil(profiles.length / itemsPerPage);
+  // Función para mezclar los perfiles aleatoriamente
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
+  // Mezcla los perfiles antes de paginar
+  const shuffledProfiles = shuffleArray([...profiles]);
+  const pageCount = Math.ceil(shuffledProfiles.length / itemsPerPage);
   const offset = currentPage * itemsPerPage;
-  const currentProfiles = profiles.slice(offset, offset + itemsPerPage);
+  const currentProfiles = shuffledProfiles.slice(offset, offset + itemsPerPage);
 
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
