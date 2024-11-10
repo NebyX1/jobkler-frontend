@@ -67,7 +67,7 @@ const useUploadToCloudinary = (userId) => {
   const deleteImage = async (publicId) => {
     try {
       const response = await axios.post(
-        'http://loko.jobkler.com/api/cloudinary/delete-image/',
+        'https://loko.jobkler.com/api/cloudinary/delete-image/',
         { publicIds: [publicId] }, // Enviamos un array con el publicId
         {
           headers: {
