@@ -1,74 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
 
-/* Hero Section with Background */
-.heroSection {
-  position: relative;
-  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730000938/Home_Header_mavezj.webp');
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  padding: 6rem 0;
-  color: #ffffff;
-  min-height: 400px;
-}
-
-.heroSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(63, 59, 116, 0.1); /* Dark overlay */
-  z-index: 1;
-}
-
-.heroSection > * {
-  position: relative;
-  z-index: 2;
-}
-
-.title {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: 'Rubik', sans-serif;
-  margin-bottom: 1rem;
-}
-
-.subTitle {
-  font-size: 1.5rem;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  font-family: 'Rubik', sans-serif;
-  margin-bottom: 2rem;
-}
-
 /* SearchBox Section */
 .searchBoxSection {
-  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730013344/SearchBox_Background_fk6wpx.webp');
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1731386175/SearchBox_Header_dth0km.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
-  min-height: 400px;
+  min-height: 600px;
+  text-align: center;
 }
 
-.searchBoxSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Máscara oscura */
-  z-index: 1;
+.title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* White text color */
+  text-align: center;
 }
 
 .searchBoxSection > * {
@@ -98,65 +51,77 @@
 
 /* Oportunities Section */
 .oportunitiesSection {
-    position: relative;
-    background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1730014482/Oportunities_Section_yuj3so.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 700px;
-    color: #ffffff;
-    text-align: center;
-  }
-  
-  .oportunitiesSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Máscara oscura */
-    z-index: 1;
-  }
-  
-  .oportunitiesSection > * {
-    position: relative;
-    z-index: 2;
-  }
-.oportunitiesText {
-  font-family: 'Playwrite GB S', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.2;
-  animation: colorChange 5s ease-in-out infinite;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmc65vhh6/image/upload/v1731386389/TakeAction_Header_yzx3w0.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  color: #ffffff;
+  text-align: center;
 }
 
-/* Color Changing Effect */
-@keyframes colorChange {
-  0% { color: #b30e0e; }
-  25% { color: #ff9e4a; }
-  50% { color: #ffd24a; }
-  75% { color: #d1ffd9; }
-  100% { color: #052d99; }
+.oportunitiesSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.oportunitiesText {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f5f8fa; /* White text color */
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative; /* Necesario para el pseudo-elemento */
+  display: inline-block; /* Necesario para el pseudo-elemento */
+  padding: 0 10px; /* Añadir padding para el efecto de resaltado */
+  width: fit-content; /* Asegura que el contenedor se ajuste al contenido */
+}
+
+.oportunitiesText::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; /* Extiende desde la parte superior */
+  bottom: 0; /* Extiende hasta la parte inferior */
+  background-color: rgba(0, 123, 255, 0.5); /* Azul semi transparente */
+  z-index: -1; /* Colocar el resaltado detrás del texto */
+  border-radius: 5px; /* Bordes redondeados para el resaltado */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .oportunitiesText {
     font-size: 1.8rem;
+    padding: 0 5px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .roundedButton {
+    width: 80%;
+    margin: 1rem auto 0; /* Asegura que el botón esté centrado debajo del texto */
+    display: block; /* Asegura que ocupe el ancho completo disponible */
   }
 }
 
 .roundedButton {
   border-radius: 50px; /* Bordes redondeados */
-  padding: 0.75rem 1.5rem; /* Espaciado interno */
-  font-size: 1rem; /* Tamaño de fuente */
+  padding: 0.5rem 0.5rem; /* Espaciado interno */
+  font-size: 1.5rem; /* Tamaño de fuente */
   transition: background-color 0.3s ease; /* Transición suave */
+  margin-top: 1rem;
+  text-align: center;
+  display: block; /* Cambiado a block para asegurarse que no haya desplazamientos laterales */
+  width: auto; /* Permite que el botón se ajuste al contenido en pantallas grandes */
+  max-width: 400px; /* Limita el ancho máximo del botón */
+  margin-left: auto;
+  margin-right: auto; /* Centra el botón en pantallas grandes */
 }
 
 .roundedButton:hover {

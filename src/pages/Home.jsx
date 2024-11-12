@@ -17,28 +17,17 @@ const Home = () => {
         <SearchBox />
       </div>
 
-      {/* Hero Section */}
-      <div className={`${styles.heroSection} mt-1`}>
-        <div className="text-center py-5">
-          <h1 className={styles.title}>Te damos la Bienvenida a Jobkler</h1>
-          <p className={styles.subTitle}>
-            Aquí tus sueños comienzan a crecer en grande, encuentra
-            oportunidades únicas
-          </p>
-        </div>
-      </div>
-
       {/* Oportunities Section */}
       <div className={`${styles.oportunitiesSection} mt-1 mb-1`}>
         <div className="text-center p-2">
           <p className={styles.oportunitiesText}>
-            Abre las puertas de las oportunidades, ¡regístrate en Jobkler ya!
+            Conoce como la Inteligencia Artificial puede impulsar tu perfil
           </p>
           <Link
-            to="/register"
+            to="/take-action"
             className={`${styles.roundedButton} btn btn-primary mt-3`}
           >
-            ¡Regístrate YA!
+            Impulsa Tu Perfil con IA
           </Link>
         </div>
       </div>

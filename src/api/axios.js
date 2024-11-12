@@ -2,8 +2,10 @@ import axios from 'axios';
 import useAuth from '@/store/useAuth';
 import { toast } from 'react-hot-toast';
 
+const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const api = axios.create({
-  baseURL: 'https://loko.jobkler.com/',
+  baseURL: BACKEND_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },

@@ -13,6 +13,7 @@ import About from "@/pages/About";
 import Legal from "@/pages/Legal";
 import Contact from "@/pages/Contact";
 import Resources from "@/pages/Resources";
+import TakeAction from "@/pages/TakeAction";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Results from "@/pages/Results";
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
         <Route path="/about" element={<About />} />
         <Route path="/legal" element={<Legal />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/take-action" element={<TakeAction />} />
         <Route
           path="/login"
           element={

@@ -5,8 +5,9 @@ import useUploadToCloudinary from "@/components/updateProfile/useUploadToCloudin
 import { toast } from "react-hot-toast";
 
 const ImagesUpdateForm = ({ userId, userProfile, onImageUrlsChange }) => {
-  const { uploadImage, deleteImage, checkImageExists } = useUploadToCloudinary(userId);
-
+  const { uploadImage, deleteImage, checkImageExists } =
+    useUploadToCloudinary(userId);
+  const [showUpdateProfileAlert, setShowUpdateProfileAlert] = useState(false);
   const [imageFiles, setImageFiles] = useState({});
   const [imageUrls, setImageUrls] = useState({
     profileImage: "",
@@ -71,23 +72,52 @@ const ImagesUpdateForm = ({ userId, userProfile, onImageUrlsChange }) => {
 
   const handleDeleteImage = async (type) => {
     const existingUrl = imageUrls[type];
-    if (!existingUrl) return;
+    if (!existingUrl) {
+      toast.error("No hay una imagen para eliminar.");
+      return;
+    }
 
     const publicId = getPublicIdFromUrl(existingUrl);
-    const deleted = await deleteImage(publicId);
+    if (!publicId) {
+      toast.error("URL de imagen inválida.");
+      return;
+    }
 
-    if (deleted) {
-      const updatedUrls = {
-        ...imageUrls,
-        [type]: "",
-      };
-      setImageUrls(updatedUrls);
-      setImageFiles((prevFiles) => ({
-        ...prevFiles,
-        [type]: null,
-      }));
-      toast.success(`Imagen de ${type} eliminada`);
-      onImageUrlsChange(updatedUrls);
+    try {
+      const response = await deleteImage([publicId]); // Ahora recibe response.data
+      console.log("Respuesta del backend:", response);
+
+      if (response.success) {
+        // Buscar el resultado específico para el publicId
+        const deletedResult = response.results.find(
+          (r) => r.public_id === publicId
+        );
+        if (deletedResult && deletedResult.deleted) {
+          const updatedUrls = {
+            ...imageUrls,
+            [type]: "",
+          };
+          setImageUrls(updatedUrls);
+          setImageFiles((prevFiles) => ({
+            ...prevFiles,
+            [type]: null,
+          }));
+          toast.success(`Imagen de ${type} eliminada`);
+          onImageUrlsChange(updatedUrls);
+
+          // Mostrar el Alert
+          setShowUpdateProfileAlert(true);
+        } else {
+          const errorMessage = deletedResult?.error || "Error desconocido";
+          toast.error(`No se pudo eliminar la imagen: ${errorMessage}`);
+        }
+      } else {
+        // Manejar fallos parciales o totales
+        toast.error(`No se pudo eliminar la imagen: ${response.message}`);
+      }
+    } catch (error) {
+      toast.error("Error al eliminar la imagen.");
+      console.error(error);
     }
   };
 
@@ -105,7 +135,9 @@ const ImagesUpdateForm = ({ userId, userProfile, onImageUrlsChange }) => {
         [type]: newUrl,
       };
       setImageUrls(updatedUrls);
-      toast.success(`Imagen de ${type} actualizada`);
+      toast.success(
+        `Ahora presione Actualizar Perfil para que el cambio se haga efectivo`
+      );
       onImageUrlsChange(updatedUrls);
     }
   };
@@ -132,11 +164,27 @@ const ImagesUpdateForm = ({ userId, userProfile, onImageUrlsChange }) => {
   return (
     <>
       <Alert variant="info" className="mb-4">
-        Nota: Por el momento solo estamos aceptando imágenes en formato WebP y tamaño máximo de 300 KB.
-        Jobkler está en modo de prueba y no se aceptarán imágenes que no cumplan con estos requisitos.
-        Puede utilizar un convertidor de imágenes en línea para convertir sus imágenes a formato WebP.
-        Esperamos que esto no cause inconvenientes y agradecemos su comprensión.
+        Nota: Por el momento solo estamos aceptando imágenes en formato WebP y
+        tamaño máximo de 300 KB. Jobkler está en modo de prueba y no se
+        aceptarán imágenes que no cumplan con estos requisitos. Puede utilizar
+        un convertidor de imágenes en línea para convertir sus imágenes a
+        formato WebP. Esperamos que esto no cause inconvenientes y agradecemos
+        su comprensión.
       </Alert>
+
+      {/* Alert para recordar al usuario actualizar el perfil */}
+      {showUpdateProfileAlert && (
+        <Alert
+          variant="warning"
+          onClose={() => setShowUpdateProfileAlert(false)}
+          dismissible
+          className="mb-4"
+        >
+          No olvides dar click en "Actualizar Perfil" o tus fotos no se
+          actualizarán.
+        </Alert>
+      )}
+
       <div>
         <Form.Label className="h3">Administrar Imágenes</Form.Label>
         <Row>
@@ -195,4 +243,3 @@ const ImagesUpdateForm = ({ userId, userProfile, onImageUrlsChange }) => {
 };
 
 export default ImagesUpdateForm;
-

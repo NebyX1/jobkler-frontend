@@ -4,6 +4,8 @@ import { toast } from 'react-hot-toast';
 const CLOUD_NAME = 'dmc65vhh6';
 const UPLOAD_PRESET = 'ml_default';
 
+const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const useUploadToCloudinary = (userId) => {
   const folderPath = `uploads/user_${userId}`;
 
@@ -11,7 +13,7 @@ const useUploadToCloudinary = (userId) => {
   const checkImageExists = async (publicId) => {
     try {
       const response = await axios.post(
-        'https://loko.jobkler.com/api/cloudinary/check-image/',
+        `${BACKEND_BASE_URL}api/cloudinary/check-image/`,
         { publicId },
         { headers: { 'Content-Type': 'application/json' } }
       );
@@ -64,30 +66,30 @@ const useUploadToCloudinary = (userId) => {
     }
   };
 
-  const deleteImage = async (publicId) => {
+  const deleteImage = async (publicIds) => {
     try {
       const response = await axios.post(
-        'https://loko.jobkler.com/api/cloudinary/delete-image/',
-        { publicIds: [publicId] }, // Enviamos un array con el publicId
+        `${BACKEND_BASE_URL}api/cloudinary/delete-image/`,
+        { publicIds }, // Enviamos un array con el publicId
         {
           headers: {
             'Content-Type': 'application/json',
           },
         }
       );
-
+  
       if (response.data.success) {
         toast.success('Imagen eliminada correctamente');
-        return true;
+        return response.data; // Retornamos los datos completos
       } else {
         toast.error('No se pudo eliminar la imagen');
         console.error(response.data.message);
-        return false;
+        return response.data; // Retornamos los datos completos
       }
     } catch (error) {
       toast.error('Error al eliminar la imagen');
       console.error(error);
-      return false;
+      return { success: false, message: 'Error al eliminar la imagen' };
     }
   };
 
